@@ -31,6 +31,7 @@
     搜索树一层层推进|搜索树一条路走到头
     能找到全局最优路径，但是搜索时间长|搜索时间短，但可能不是最佳路径（因为可能在遍历所有节点之
     需要遍历所有节点|在遍历所有节点之前可能找到了最佳路径
+    
     ![Breadth First Search (BFS) vs. Depth First Search (DFS)](https://github.com/JinghangLi/Homework_of_MotionPlanning/blob/main/picture/L2-BFSvsDFS.jpg)
 
 ### **3. Heuristic search**
