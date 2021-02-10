@@ -36,16 +36,16 @@
 
 ### **3. Heuristic search**
 - ### 优点与缺点
-可以解决BFS均匀向外搜索，**遍历所有节点时间过多** 的问题，引入启发式搜索概念。但是算法过于 Greedy 可能会导致局部最优结果。
+  可以解决BFS均匀向外搜索，**遍历所有节点时间过多** 的问题，引入启发式搜索概念。但是算法过于 Greedy 可能会导致局部最优结果。
 
-    Definition: A heuristic is a guess of how close you are to the target
+      Definition: A heuristic is a guess of how close you are to the target
 
- * 与BFS相比，启发式算法（Greedy Best-First Search）在遍历节点时更有目的性
- * 但是在遇到障碍物时 Greedy Best-First Search 会陷入局部最优，而BFS虽然耗时久但是能找到全局最优路径
-  
-  红色路径是贪心搜索算法生成的,蓝色路径是BFS生成的
-  
-  ![Greedy Best-First Search VS BFS](http://theory.stanford.edu/~amitp/GameProgramming/concave1.png?2017-11-25-21-35-04)
+  * 与BFS相比，启发式算法（Greedy Best-First Search）在遍历节点时更有目的性
+  * 但是在遇到障碍物时 Greedy Best-First Search 会陷入局部最优，而BFS虽然耗时久但是能找到全局最优路径
+    
+    红色路径是贪心搜索算法生成的,蓝色路径是BFS生成的
+    
+    ![Greedy Best-First Search VS BFS](http://theory.stanford.edu/~amitp/GameProgramming/concave1.png?2017-11-25-21-35-04)
     
 ***
 ### **4. Dijkstra**
@@ -103,7 +103,7 @@
 
 - ### 算法内容
 
-![A* Example](https://gitee.com/jinghangli/imagebed/raw/master/20210209165107.png)
+  ![A* Example](https://gitee.com/jinghangli/imagebed/raw/master/20210209165107.png)
 
 - ### 缺点及原因
   当对节点的估计值过大时（即 h(n)值）openlist的节点排序会出错
@@ -211,6 +211,7 @@
   - **Jumping Rule:** JPS 跳跃规则
     - 对所有节点优先考虑直线跳跃
     - 发现特殊节点时 (由 Look Ahead Rule 决定) 则回溯该方向跳跃的父节点或者中继节点 (因为跳跃是直线的,不是折线的,所以中继节点也要加入 openlist),并将他们加入 openlist (eg: y 节点)
+      
       ![直线跳跃](https://gitee.com/jinghangli/imagebed/raw/master/20210210173432.png)
         
         上图中, 在节点 y 跳跃时发现了Forced neighbor节点 z, 因此回溯该次跳跃, 将特殊节点 y 加入openlist.
